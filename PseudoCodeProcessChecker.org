@@ -1,0 +1,12 @@
+** IBO Pseudo Code
+
+function Main
+    // Check to see if a process is running "Network and Sharing Center".
+    output "Check to see if Network and Sharing Center is running."
+end function
+
+
+** Gaddis Pseudo Code
+// Check to see if a process is running "Network and Sharing Center".
+Display "Check to see if Network and Sharing Center is running."
+
