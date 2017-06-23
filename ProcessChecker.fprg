@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ray"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2017-06-02 11:52:32 PM"/>
+        <attribute name="created" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDYtMDI7IDA1OjE2OjU1IFBNOyAyMzM3"/>
+        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDYtMDI7IDExOjUyOjMyIFBNOyAyMzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Check to see if a process or Window is running or open &quot;Network and Sharing Center&quot;."/>
+            <output expression="&quot;Check to see if a process is running or a Window is open Network and Sharing Center&quot;"/>
+        </body>
+    </function>
+</flowgorithm>
