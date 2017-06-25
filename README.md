@@ -17,20 +17,20 @@ EXPERIMENTAL - A study of Code Generation in Visual Programming Languages featur
 
 - [C++](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/CPlusPlus/BudgetAndBilling.cpp)
 
-- C#
+- [C#](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/CSHarp/BudgetAndBilling.cs)
 
-- Java
+- [Java](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Java/BudgetAndBilling.java)
 
-- VB.NET
+- [VB.NET](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/VB.NET/BudgetAndBilling.vb)
 
 #### Scripting Languages
 
-- Javascript
+- [Javascript](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Javascript/BudgetAndBilling.js)
 
-- Perl
+- [Perl](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Perl/BudgetAndBilling.pl)
 
-- Python
+- [Python](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Python/BudgetAndBilling.py)
 
-- Ruby
+- [Ruby](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Ruby/BudgetAndBilling.rb)
 
-- VBA
+- [VBA](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/VBA/BudgetAndBilling.bas)
