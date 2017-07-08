@@ -17,6 +17,9 @@ Currently the projects below are in 12 different languages (actually 13 if you i
 
 - [Process Checker Pseudocodes](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/PseudoCodeProcessChecker.org)
 
+- [Process/Windows Checker written in AutoIT Script](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/AutoIT/CheckIfWindowExists.au3)
+
+
 ### Budget and Billing Project and Languages Written in:
 ![BudgetBillingFlowchart](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/BudgetAndBilling%20-%20MainBudgetAndBilling.png)
 
