@@ -4,15 +4,30 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ray"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2017-06-02 11:52:32 PM"/>
+        <attribute name="saved" value="2017-07-08 11:34:18 AM"/>
         <attribute name="created" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDYtMDI7IDA1OjE2OjU1IFBNOyAyMzM3"/>
-        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDYtMDI7IDExOjUyOjMyIFBNOyAyMzI5"/>
+        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDctMDg7IDExOjM0OjE4IEFNOyAyMzI1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Check to see if a process or Window is running or open &quot;Network and Sharing Center&quot;."/>
             <output expression="&quot;Check to see if a process is running or a Window is open Network and Sharing Center&quot;"/>
+            <declare name="X" type="Integer" array="False" size="" variables="X"/>
+            <comment text="WinExists is an AutoIT function that will result in 1 if a Window exists or produce a 0 if it does not exist."/>
+            <call expression="WinExists(1)"/>
+            <assign variable="X" expression="1"/>
+            <if expression="X=1">
+                <then>
+                    <output expression="&quot;Network and Sharing Center is Open&quot;"/>
+                    <comment text="Do nothing"/>
+                </then>
+                <else>
+                    <output expression="&quot;Network and Sharing Center is NOT open&quot;"/>
+                    <comment text="Using AutoIT and running ClassID to invoke Network and Sharing Center"/>
+                    <call expression="Run (&quot;explorer shell:::{CLSID}&quot;)"/>
+                </else>
+            </if>
         </body>
     </function>
 </flowgorithm>

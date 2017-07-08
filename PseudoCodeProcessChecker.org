@@ -1,16 +1,42 @@
 ** IBO Pseudo Code
 
 function Main
-
-    // Check to see if a process is running "Network and Sharing Center".
-
-    output "Check to see if Network and Sharing Center is running."
-
+    // Check to see if a process or Window is running or open "Network and Sharing Center".
+    output "Check to see if a process is running or a Window is open Network and Sharing Center"
+    
+    // WinExists is an AutoIT function that will result in 1 if a Window exists or produce a 0 if it does not exist.
+    WinExists(1)
+    X = 1
+    if X = 1 then
+        output "Network and Sharing Center is Open"
+        
+        // Do nothing
+    else
+        output "Network and Sharing Center is NOT open"
+        
+        // Using AutoIT and running ClassID to invoke Network and Sharing Center
+        Run("explorer shell:::{CLSID}")
+    end if
 end function
 
 
 ** Gaddis Pseudo Code
-// Check to see if a process is running "Network and Sharing Center".
 
-Display "Check to see if Network and Sharing Center is running."
 
+// Check to see if a process or Window is running or open "Network and Sharing Center".
+Display "Check to see if a process is running or a Window is open Network and Sharing Center"
+Declare Integer X
+
+// WinExists is an AutoIT function that will result in 1 if a Window exists or produce a 0 if it does not exist.
+Call WinExists(1)
+Set X = 1
+If X == 1 Then
+    Display "Network and Sharing Center is Open"
+    
+    // Do nothing
+Else
+    Display "Network and Sharing Center is NOT open"
+    
+    // Using AutoIT and running ClassID to invoke Network and Sharing Center
+    Call Run("explorer shell:::{CLSID}")
+End If
