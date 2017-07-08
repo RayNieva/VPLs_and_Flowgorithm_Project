@@ -1,13 +1,13 @@
 # VPLs_and_Flowgorithm_Project
 EXPERIMENTAL - A study of Code Generation in Visual Programming Languages featuring Flowgorithm to autogenerate coding in multiple languages.
 
-Currently the projects below are in 12 different languages (actually 13 if you include XML which again is a "core technology to Flowgorithm)
+Currently the projects below are in 13 different languages (actually 14 if you include XML which again is a "core technology to Flowgorithm as well as many of todays internet based technologies)
 
-- (2) IBO Pseudocode and Gaddis Pseudocode useful for solutions not supported by Flowgarithm like for instance developing a solution in Powershell.
+- (2) IBO Pseudocode and Gaddis Pseudocode useful for solutions not supported by Flowgarithm like for instance developing a solution in Powershell, AutoIT etc.. .
 
  **(4) System Languages:**
 
- **(6) Scripting Languages:**
+ **(7) Scripting Languages:**
 
 
 ### Process Checker Project and Languages Written in:
@@ -37,6 +37,8 @@ Currently the projects below are in 12 different languages (actually 13 if you i
 - [VB.NET](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/VB.NET/BudgetAndBilling.vb)
 
 #### Scripting Languages
+
+- [AutoIT](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/AutoIT/CheckIfWindowExists.au3)
 
 - [Lua](https://github.com/RayNieva/VPLs_and_Flowgorithm_Project/blob/master/Lua/BudgetAndBilling.lua)
 
