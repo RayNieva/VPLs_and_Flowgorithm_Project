@@ -15,6 +15,7 @@
 Local $X = WinExists("Network and Sharing Center")
 If  $X=1 Then
   MsgBox($MB_OK, "Checking for Window", "Network and Sharing Center is Open")
+  WinActivate ("Network and Sharing Center" )
 Else
   MsgBox($MB_OK, "Checking for Window", "Network and Sharing Center is NOT Open")
   MsgBox($MB_OK, "Open Window", "Will Start Network and Sharing Center")
