@@ -1,5 +1,7 @@
 ** IBO Pseudo Code
 
+
+
 function Main
     // Check to see if a process or Window is running or open "Network and Sharing Center".
     output "Check to see if a process is running or a Window is open Network and Sharing Center"
@@ -10,7 +12,8 @@ function Main
     if X = 1 then
         output "Network and Sharing Center is Open"
         
-        // Do nothing
+        // If process is running (Window minimized or hidden) bring to forefront.
+        WinActivate("Network and Sharing Center")
     else
         output "Network and Sharing Center is NOT open"
         
@@ -20,7 +23,10 @@ function Main
 end function
 
 
+
 ** Gaddis Pseudo Code
+
+
 
 
 // Check to see if a process or Window is running or open "Network and Sharing Center".
@@ -33,10 +39,12 @@ Set X = 1
 If X == 1 Then
     Display "Network and Sharing Center is Open"
     
-    // Do nothing
+    // If process is running (Window minimized or hidden) bring to forefront.
+    Call WinActivate("Network and Sharing Center")
 Else
     Display "Network and Sharing Center is NOT open"
     
     // Using AutoIT and running ClassID to invoke Network and Sharing Center
     Call Run("explorer shell:::{CLSID}")
 End If
+
