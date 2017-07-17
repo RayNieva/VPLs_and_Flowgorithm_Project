@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ray"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2017-07-08 11:34:18 AM"/>
+        <attribute name="saved" value="2017-07-16 08:45:53 PM"/>
         <attribute name="created" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDYtMDI7IDA1OjE2OjU1IFBNOyAyMzM3"/>
-        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDctMDg7IDExOjM0OjE4IEFNOyAyMzI1"/>
+        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDctMTY7IDA4OjQ1OjUzIFBNOyAyMzQ2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -20,7 +20,8 @@
             <if expression="X=1">
                 <then>
                     <output expression="&quot;Network and Sharing Center is Open&quot;"/>
-                    <comment text="Do nothing"/>
+                    <comment text="If process is running (Window minimized or hidden) bring to forefront."/>
+                    <call expression="WinActivate(&quot;Network and Sharing Center&quot;)"/>
                 </then>
                 <else>
                     <output expression="&quot;Network and Sharing Center is NOT open&quot;"/>
