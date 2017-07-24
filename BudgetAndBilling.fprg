@@ -4,20 +4,38 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ray"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2017-05-23 10:15:58 PM"/>
+        <attribute name="saved" value="2017-07-24 09:22:38 AM"/>
         <attribute name="created" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDUtMjM7IDA4OjMzOjE3IFBNOyAyMzM5"/>
-        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDUtMjM7IDEwOjE1OjU4IFBNOyAyMzM3"/>
+        <attribute name="edited" value="UmF5OyBSQVlOSUVWQTI7IDIwMTctMDctMjQ7IDA5OjIyOjM4IEFNOyAyMzI5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="This program is intended to be used to calculate my weekly budget based on income that week and projected expenses that week."/>
             <output expression="&quot;Calculating Weekly/ Budget&quot;"/>
-            <comment text="This is usually weekly (net) income but can be another period like bi-weekly or monthly"/>
-            <output expression="&quot;Get Income for week/period&quot;"/>
-            <declare name="income1" type="Real" array="False" size="" variables="income1"/>
-            <input variable="income1"/>
+            <comment text="Call Function to calculate total income"/>
+            <declare name="paySource1" type="Real" array="False" size="" variables="paySource1"/>
+            <input variable="paySource1"/>
+            <declare name="paySource2" type="Real" array="False" size="" variables="paySource2"/>
+            <input variable="paySource2"/>
+            <declare name="paySource3" type="Real" array="False" size="" variables="paySource3"/>
+            <input variable="paySource3"/>
+            <call expression="GetIncome(paySource1, paySource2,paySource3)"/>
+            <output expression="&quot;Returning to Main&quot;"/>
+            <comment text="At this point should have total income"/>
             <comment text="At this point start inputting billing items. These are essentially billing items for the current week or period.&#13;&#10;The question is at this point what direction this program will go? Will there be permanently assigned billing items or billing items adhoc defined each week. Can Flowgorithm define a true OO approach?"/>
+        </body>
+    </function>
+    <function name="GetIncome" type="Real" variable="totalPay">
+        <parameters>
+            <parameter name="paySource1" type="Real" array="False"/>
+            <parameter name="paySource2" type="Real" array="False"/>
+            <parameter name="paySource3" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="totalPay" type="Real" array="False" size="" variables="totalPay"/>
+            <assign variable="totalPay" expression="paySource1+paySource2+paySource3"/>
+            <output expression="totalPay"/>
         </body>
     </function>
 </flowgorithm>
