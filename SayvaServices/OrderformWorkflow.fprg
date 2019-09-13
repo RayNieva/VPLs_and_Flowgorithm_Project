@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="rayni"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-09-12 07:01:39 PM"/>
+        <attribute name="created" value="cmF5bmk7REVTS1RPUC0zRjEzNjhSOzIwMTktMDktMTI7MDE6MjQ6MjUgUE07MjgyNQ=="/>
+        <attribute name="edited" value="cmF5bmk7REVTS1RPUC0zRjEzNjhSOzIwMTktMDktMTI7MDc6MDE6MzkgUE07NTsyOTQz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Dispatcher Receives Call/Email and Request for Service&quot;" newline="True"/>
+            <output expression="&quot;Need to Look up Status of Caller in Database&quot;" newline="True"/>
+            <declare name="Caller" type="Integer" array="False" size=""/>
+            <assign variable="Caller" expression="1"/>
+            <declare name="CurrentCustomer" type="Integer" array="False" size=""/>
+            <input variable="CurrentCustomer"/>
+            <if expression="Caller = CurrentCustomer">
+                <then>
+                    <output expression="&quot;Does Customer Have an Outstanding Balance?&quot;" newline="True"/>
+                    <declare name="BalanceDueStatus" type="String" array="False" size=""/>
+                    <input variable="BalanceDueStatus"/>
+                    <if expression="BalanceDueStatus=&quot;Yes&quot;">
+                        <then>
+                            <output expression="&quot;Request Payment/and or resolve due balance for further service&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Get information regarding requested Service and start a Helpdesk ticket&quot;" newline="True"/>
+                            <output expression="&quot;Contact Available Agent.  Available Agent will contact Customer&quot;" newline="True"/>
+                            <output expression="&quot;Agent Contacts Customer and determines if the problem/service can be completed on the phone or will require an on-premise visit or might even determine requires a referred service.&quot;" newline="True"/>
+                            <declare name="PhoneResolution" type="Integer" array="False" size=""/>
+                            <input variable="PhoneResolution"/>
+                            <if expression="PhoneResolution=&quot;Yes&quot;">
+                                <then>
+                                    <output expression="&quot;Resolve or Provide Service over phone. Add information to Helpdesk ticket and Fillout Order Form. Collect payment electronically somehow. Customer Invoice Needs to be sent to customer.&quot;" newline="True"/>
+                                    <declare name="ReferredServiceReqd" type="String" array="False" size=""/>
+                                    <input variable="ReferredServiceReqd"/>
+                                    <if expression="ReferredServiceReqd=&quot;Yes&quot;">
+                                        <then>
+                                            <output expression="&quot;External Agent Contact is required ie Plumbing Contractor, HVAC Contractor, Computer or Phone Repair Service Etc....&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                    <output expression="&quot;Order Form Needs to be entered into Database&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Travel to customer premises resolve or provide service. Fill out paper order form. Collect payment. Carbon copy is receipt.&quot;" newline="True"/>
+                                    <declare name="ReferredServiceReqd" type="String" array="False" size=""/>
+                                    <input variable="ReferredServiceReqd"/>
+                                    <if expression="ReferredServiceReqd=&quot;Yes&quot;">
+                                        <then>
+                                            <output expression="&quot;External Agent Contact is required ie Plumbing Contractor, HVAC Contractor, Computer or Phone Repair Service Etc....&quot;" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                    <output expression="&quot;Order Form Needs to be entered into Database&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Enter Information Regarding New Customer into Database&quot;" newline="False"/>
+                    <output expression="&quot;Get information regarding requested Service and start a Helpdesk ticket&quot;" newline="True"/>
+                    <output expression="&quot;Contact Available Agent.  Available Agent will contact Customer&quot;" newline="True"/>
+                    <output expression="&quot;Agent Contacts Customer and determines if the problem/service can be completed on the phone or will require an on-premise visit or might even determine requires a referred service.&quot;" newline="True"/>
+                    <declare name="PhoneResolution" type="String" array="False" size=""/>
+                    <input variable="PhoneResolution"/>
+                    <if expression="PhoneResolution=&quot;Yes&quot;">
+                        <then>
+                            <output expression="&quot;Resolve or Provide Service over phone. Add information to Helpdesk ticket and Fillout Order Form. Collect payment electronically somehow. Customer Invoice Needs to be sent to customer.&quot;" newline="False"/>
+                            <declare name="ReferredServiceReqd" type="String" array="False" size=""/>
+                            <input variable="ReferredServiceReqd"/>
+                            <if expression="ReferredServiceReqd=&quot;Yes&quot;">
+                                <then>
+                                    <output expression="&quot;External Agent Contact is required ie Plumbing Contractor, HVAC Contractor, Computer or Phone Repair Service Etc....&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;Order Form Needs to be entered into Database&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Travel to customer premises resolve or provide service. Fill out paper order form. Collect payment. Carbon copy is receipt.&quot;" newline="True"/>
+                            <declare name="ReferredServiceReqd" type="String" array="False" size=""/>
+                            <input variable="ReferredServiceReqd"/>
+                            <if expression="ReferredServiceReqd=&quot;Yes&quot;">
+                                <then>
+                                    <output expression="&quot;External Agent Contact is required ie Plumbing Contractor, HVAC Contractor, Computer or Phone Repair Service Etc....&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <output expression="&quot;Order Form Needs to be entered into Database&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
